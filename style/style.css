@@ -18,11 +18,10 @@ p {
 
 #container {
     display: grid;
-    grid-template-rows: 25vh 10vh 60vh 5vh;
+    grid-template-rows: 25vh 60vh 15vh;
     grid-template-columns: 2fr 4fr 2fr;
     grid-template-areas:
         'header header header'
-        'section section section'
         '. main .'
         'footer footer footer'
     ;
@@ -41,10 +40,6 @@ p {
     height: 10vh;
 }
 
-#section {
-    grid-area: section;
-}
-
 #main {
     grid-area: main;
     display: flex;
@@ -52,8 +47,12 @@ p {
 }
 
 .box {
+    height:20vh;
     flex: 1 1 33%;
 }
+
+
+
 
 #footer {
     grid-area: footer;
