@@ -9,6 +9,7 @@ html {
 body {
     margin: 0;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 p {
@@ -18,13 +19,22 @@ p {
 
 #container {
     display: grid;
-    grid-template-rows: 25vh 60vh 15vh;
+    grid-template-rows: 25vh 70vh 5vh;
     grid-template-columns: 2fr 4fr 2fr;
     grid-template-areas:
         'header header header'
         '. main .'
         'footer footer footer'
     ;
+    /*gradient from https://uigradients.com/#Orca*/
+    background: #44A08D;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #093637, #44A08D);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #093637, #44A08D);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 }
 
 #header {
@@ -34,26 +44,51 @@ p {
 
 #header>:nth-child(1) {
     height: 15vh;
+    font-size: 3.5rem;
+    font-weight: 600;
+    padding-top: 20px;
+    color:#C0C0C0;
 }
 
 #header>:nth-child(2) {
     height: 10vh;
+    font-size: 2rem;
+    font-weight: 300;
+    padding-top: 10px;
+    color:#C0C0C0;
 }
 
 #main {
     grid-area: main;
     display: flex;
     flex-wrap: wrap;
+    padding: 5vh 0;
+    
 }
 
 .box {
-    height:20vh;
+    height: 20vh;
     flex: 1 1 33%;
+    padding-top: 5vh;
+
 }
 
+.top-box, .bottom-box {
+    border-left: 2px solid #ffd89b;
+    border-right: 2px solid #ffd89b;
+}
 
+.left-box, .right-box {
+    border-top: 2px solid #ffd89b;
+    border-bottom: 2px solid #ffd89b;
+}
+
+.middle-box {
+    border: 2px solid #ffd89b;
+}
 
 
 #footer {
     grid-area: footer;
+    color:#4cb8b4;
 }
